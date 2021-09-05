@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -10,20 +11,30 @@ android {
     defaultConfig {
         applicationId "com.litov74.grizzlytools"
         minSdkVersion 24
-        targetSdkVersion 29
+        targetSdkVersion 31
         versionCode 1
-        versionName "1.0"
-
+        versionName "1.0_beta"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    viewBinding {
+        enabled = true
+    }
+
     buildTypes {
+        debug{
+            minifyEnabled false
+            buildConfigField "String", "API_DNS", '"https://dns.google/"'
+        }
         release {
             minifyEnabled false
+            buildConfigField "String", "API_DNS", '"https://dns.google/"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -33,13 +44,62 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.startup:startup-runtime:1.1.0'
+
+
+    //
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+
+    //Moxy
+    implementation "com.github.moxy-community:moxy:$moxy_version"
+    kapt "com.github.moxy-community:moxy-compiler:$moxy_version"
+    implementation "com.github.moxy-community:moxy-ktx:$moxy_version"
+    implementation "com.github.moxy-community:moxy-androidx:$moxy_version"
+
+    //RxJava 3
+    implementation "io.reactivex.rxjava3:rxjava:$rxjava_version"
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    //RxKotlin 3
+    implementation "io.reactivex.rxjava3:rxkotlin:$rxkotlin_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0"
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //Kotlin Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
+
+    //Сhuck
+    debugImplementation "com.github.chuckerteam.chucker:library:3.4.0"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.4.0"
+
+
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.1'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'com.airbnb.android:lottie:4.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+    implementation 'com.google.android.gms:play-services-wallet:18.1.3'
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation 'net.danlew:android.joda:2.10.9.1'
+
+    //analytics
+    implementation 'com.github.apphud:ApphudSDK-Android:1.2.1'
+    implementation('com.mopub:mopub-sdk:5.18.0@aar') {
+        transitive = true
+    }
+
+
+
 }
