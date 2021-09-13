@@ -9,7 +9,7 @@ android {
     buildToolsVersion "31.0.0"
 
     defaultConfig {
-        applicationId "com.litov74.grizzlytools"
+        applicationId "com.grizzlywallpapers.wallpapersgrizzly"
         minSdkVersion 24
         targetSdkVersion 31
         versionCode 1

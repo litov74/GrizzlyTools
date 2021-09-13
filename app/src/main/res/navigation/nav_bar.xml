@@ -2,4 +2,36 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_bar" />
+    android:id="@+id/nav_bar"
+    app:startDestination="@id/fragmentSlider">
+    <fragment
+        android:id="@+id/fragmentSlider"
+        android:name="com.litov74.grizzlytools.FragmentSlider"
+        android:label="fragment_slider"
+        tools:layout="@layout/fragment_slider" />
+    <fragment
+        android:id="@+id/fragmentCategories"
+        android:name="com.litov74.grizzlytools.FragmentCategories"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/fragmentLive"
+        android:name="com.litov74.grizzlytools.FragmentLive"
+        android:label="fragment_live"
+        tools:layout="@layout/fragment_live" />
+    <fragment
+        android:id="@+id/fragmentWallpapers3d"
+        android:name="com.litov74.grizzlytools.FragmentWallpapers3d"
+        android:label="fragment_wallpapers3d"
+        tools:layout="@layout/fragment_wallpapers3d" />
+    <fragment
+        android:id="@+id/fragmentWallpapers4k"
+        android:name="com.litov74.grizzlytools.FragmentWallpapers4k"
+        android:label="fragment_wallpapers4k"
+        tools:layout="@layout/fragment_wallpapers4k" />
+    <fragment
+        android:id="@+id/fragmentVpn"
+        android:name="com.litov74.grizzlytools.FragmentVpn"
+        android:label="fragment_vpn"
+        tools:layout="@layout/fragment_vpn" />
+</navigation>
