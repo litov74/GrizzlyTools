@@ -1,38 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <item
         android:id="@+id/fragmentSlider"
         android:title="Home"
         android:icon="@drawable/ic_outline_home_24"
+        android:textColor="@drawable/button_background_colors"
+        android:background="@drawable/button_background_colors"
         />
     <item
         android:id="@+id/fragmentCategories"
         android:title="Categories"
+        android:textColor="@drawable/button_background_colors"
+        android:background="@drawable/button_background_colors"
         android:icon="@drawable/ic_outline_photo_library_24"
+
         />
     <item
         android:id="@+id/fragmentLive"
         android:title="Live"
+        android:textColor="@drawable/button_background_colors"
+        android:background="@drawable/button_background_colors"
         android:icon="@drawable/ic_outline_spa_24"
         />
     <item
         android:id="@+id/fragmentWallpapers3d"
         android:title="3D"
+        android:textColor="@drawable/button_background_colors"
+        android:background="@drawable/button_background_colors"
         android:icon="@drawable/ic_baseline_crop_square_24"
         />
     <item
         android:id="@+id/fragmentWallpapers4k"
         android:title="4K"
+        android:textColor="@drawable/button_background_colors"
+        android:background="@drawable/button_background_colors"
         android:icon="@drawable/ic_outline_4k_24"
         />
+
+    <!--
     <item
         android:id="@+id/fragmentVpn"
         android:title="VPN"
         android:icon="@drawable/ic_outline_vpn_lock_24"
         />
-
+    -->
 
 </menu>

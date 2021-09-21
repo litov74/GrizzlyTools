@@ -17,11 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GrizzlyTools"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:screenOrientation="sensorPortrait">
 
-        <activity android:name=".MainActivity"
+        <activity android:name="com.grizzlywallpapers.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.GrizzlyTools">
+            android:theme="@style/Theme.GrizzlyTools"
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +32,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.welcome.presentation.WelcomeActivity"/>
+        <activity android:name="com.grizzlywallpapers.ui.welcome.presentation.WelcomeActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name="com.grizzlywallpapers.ui.main.presentation.mainActivity" android:screenOrientation="portrait"/>
 
 
         <uses-library
@@ -38,10 +42,10 @@
             android:required="false" />
 
         <!-- MoPub's consent dialog -->
-        <activity android:name="com.mopub.common.privacy.ConsentDialogActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.common.privacy.ConsentDialogActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:screenOrientation="portrait"/>
 
         <!-- All ad formats -->
-        <activity android:name="com.mopub.common.MoPubBrowser" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.common.MoPubBrowser" android:configChanges="keyboardHidden|orientation|screenSize" android:screenOrientation="portrait"/>
 
 
     </application>

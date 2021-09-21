@@ -1,9 +1,10 @@
-package com.grizzlywallpapers.wallpapersgrizzly.ui.welcome.presentation
+package com.grizzlywallpapers.ui.welcome.presentation
 
 import android.content.Context
-import com.grizzlywallpapers.wallpapersgrizzly.common.base.BasePresenter
-import com.grizzlywallpapers.wallpapersgrizzly.ui.welcome.domain.WelcomeInteractor
-import com.grizzlywallpapers.wallpapersgrizzly.ui.welcome.domain.WelcomeInteractorImpl
+import com.grizzlywallpapers.common.base.BasePresenter
+import com.grizzlywallpapers.ui.welcome.domain.WelcomeInteractor
+import com.grizzlywallpapers.ui.welcome.domain.WelcomeInteractorImpl
+import com.grizzlywallpapers.ui.welcome.presentation.WelcomeView
 import moxy.MvpPresenter
 
 class WelcomePresenter(val context: Context) : MvpPresenter<WelcomeView>(), BasePresenter {
@@ -12,7 +13,12 @@ class WelcomePresenter(val context: Context) : MvpPresenter<WelcomeView>(), Base
     override fun onDestroyCalled() {}
 
     fun onContinueButtonClicked(){
-        //TODO: add click listener
+        runMainActivity()
+    }
+
+    private fun runMainActivity(){
+        //interactor.disposeRequests()
+        viewState.finishActivity()
     }
 
 

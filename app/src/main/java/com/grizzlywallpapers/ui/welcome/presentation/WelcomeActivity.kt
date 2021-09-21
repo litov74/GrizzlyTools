@@ -1,9 +1,8 @@
-package com.grizzlywallpapers.wallpapersgrizzly.ui.welcome.presentation
+package com.grizzlywallpapers.ui.welcome.presentation
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
-import com.grizzlywallpapers.wallpapersgrizzly.MainActivity
+import com.grizzlywallpapers.ui.main.presentation.mainActivity
 import com.grizzlywallpapers.wallpapersgrizzly.databinding.ActivityWelcomeBinding
 import moxy.MvpAppCompatActivity
 import moxy.MvpView
@@ -38,7 +37,7 @@ class WelcomeActivity : MvpAppCompatActivity(), WelcomeView {
 
     override fun finishActivity() {
         runOnUiThread {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, mainActivity::class.java))
             finish()
         }
     }

@@ -1,4 +1,4 @@
-package com.grizzlywallpapers.wallpapersgrizzly.common
+package com.grizzlywallpapers.common
 
 object Constants {
 
@@ -11,7 +11,7 @@ object Constants {
 
     // api keys
 
-    const val yandexApi = ""
+    const val yandexApi = "68c9e904-d1ce-4936-8e22-db2979bb3e85"
 
 
 }

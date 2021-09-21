@@ -1,4 +1,4 @@
-package com.grizzlywallpapers.wallpapersgrizzly.common.base
+package com.grizzlywallpapers.common.base
 
 interface BasePresenter {
     fun onDestroyCalled()

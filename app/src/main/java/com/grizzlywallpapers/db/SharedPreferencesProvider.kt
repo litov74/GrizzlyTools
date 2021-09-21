@@ -1,7 +1,7 @@
-package com.grizzlywallpapers.wallpapersgrizzly.db
+package com.grizzlywallpapers.db
 
 import android.content.Context
-import com.grizzlywallpapers.wallpapersgrizzly.MainActivity.Companion.SP_KEY_ACCOUNT
+import com.grizzlywallpapers.MainActivity.Companion.SP_KEY_ACCOUNT
 
 open class SharedPreferencesProvider(context: Context) {
 

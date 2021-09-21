@@ -1,10 +1,10 @@
-package com.grizzlywallpapers.wallpapersgrizzly.ui.welcome.domain
+package com.grizzlywallpapers.ui.welcome.domain
 
-import com.grizzlywallpapers.wallpapersgrizzly.common.base.BaseInteractor
-import com.grizzlywallpapers.wallpapersgrizzly.db.SharedPreferencesProvider
-import com.grizzlywallpapers.wallpapersgrizzly.ui.welcome.presentation.WelcomePresenter
+import com.grizzlywallpapers.common.base.BaseInteractor
+import com.grizzlywallpapers.db.SharedPreferencesProvider
+import com.grizzlywallpapers.ui.welcome.presentation.WelcomePresenter
 
-interface WelcomeInteractor : BaseInteractor{
+interface WelcomeInteractor : BaseInteractor {
 
 }
 

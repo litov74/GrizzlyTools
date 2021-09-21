@@ -3,35 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_bar"
-    app:startDestination="@id/fragmentSlider">
+    app:startDestination="@id/fragmentSlider"
+    >
     <fragment
         android:id="@+id/fragmentSlider"
-        android:name="com.litov74.grizzlytools.FragmentSlider"
+        android:name="com.grizzlywallpapers.ui.slider.presentation.FragmentSlider"
         android:label="fragment_slider"
         tools:layout="@layout/fragment_slider" />
     <fragment
         android:id="@+id/fragmentCategories"
-        android:name="com.litov74.grizzlytools.FragmentCategories"
+        android:name="com.grizzlywallpapers.ui.categories.presentation.FragmentCategories"
         android:label="fragment_categories"
         tools:layout="@layout/fragment_categories" />
     <fragment
         android:id="@+id/fragmentLive"
-        android:name="com.litov74.grizzlytools.FragmentLive"
+        android:name="com.grizzlywallpapers.ui.live.presentation.FragmentLive"
         android:label="fragment_live"
         tools:layout="@layout/fragment_live" />
     <fragment
         android:id="@+id/fragmentWallpapers3d"
-        android:name="com.litov74.grizzlytools.FragmentWallpapers3d"
+        android:name="com.grizzlywallpapers.ui.w3d.presentation.FragmentWallpapers3d"
         android:label="fragment_wallpapers3d"
         tools:layout="@layout/fragment_wallpapers3d" />
     <fragment
         android:id="@+id/fragmentWallpapers4k"
-        android:name="com.litov74.grizzlytools.FragmentWallpapers4k"
+        android:name="com.grizzlywallpapers.ui.w4k.presentation.FragmentWallpapers4k"
         android:label="fragment_wallpapers4k"
         tools:layout="@layout/fragment_wallpapers4k" />
     <fragment
         android:id="@+id/fragmentVpn"
-        android:name="com.litov74.grizzlytools.FragmentVpn"
+        android:name="com.grizzlywallpapers.ui.vpn.presentation.FragmentVpn"
         android:label="fragment_vpn"
         tools:layout="@layout/fragment_vpn" />
 </navigation>

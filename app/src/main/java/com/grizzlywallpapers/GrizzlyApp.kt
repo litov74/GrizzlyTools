@@ -1,4 +1,4 @@
-package com.grizzlywallpapers.wallpapersgrizzly
+package com.grizzlywallpapers
 
 import android.content.Context
 import androidx.startup.AppInitializer
@@ -26,7 +26,7 @@ class GrizzlyApp : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
 
-        val context: Context = GrizzlyApp.applicationContext()
+        val context: Context = applicationContext()
         AppInitializer.getInstance(this).initializeComponent(
             JodaTimeInitializer::class.java
         )

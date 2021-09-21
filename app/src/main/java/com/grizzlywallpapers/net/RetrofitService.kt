@@ -1,4 +1,4 @@
-package com.grizzlywallpapers.wallpapersgrizzly.net
+package com.grizzlywallpapers.net
 
 class RetrofitService {
 }

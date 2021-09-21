@@ -1,22 +1,20 @@
-package com.grizzlywallpapers.wallpapersgrizzly
+package com.grizzlywallpapers
 
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.Window
-import android.view.WindowManager
-import com.grizzlywallpapers.wallpapersgrizzly.common.Constants.yandexApi
-import com.grizzlywallpapers.wallpapersgrizzly.ui.welcome.presentation.WelcomeActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.grizzlywallpapers.common.Constants.yandexApi
+import com.grizzlywallpapers.wallpapersgrizzly.R
+import com.grizzlywallpapers.ui.welcome.presentation.WelcomeActivity
 import moxy.MvpAppCompatActivity
-import java.net.URL
 import com.yandex.metrica.YandexMetrica
 
 import com.yandex.metrica.YandexMetricaConfig
-
-
 
 
 class MainActivity : MvpAppCompatActivity() {
@@ -27,21 +25,27 @@ class MainActivity : MvpAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         // Creating an extended library configuration.
-        // Creating an extended library configuration.
-        //val config = YandexMetricaConfig.newConfigBuilder(yandexApi).build()
+        val config = YandexMetricaConfig.newConfigBuilder(yandexApi).build()
         //// Initializing the AppMetrica SDK.
-        //// Initializing the AppMetrica SDK.
-        //YandexMetrica.activate(applicationContext, config)
+        YandexMetrica.activate(applicationContext, config)
         //// Automatic tracking of user activity.
-        //// Automatic tracking of user activity.
-        //YandexMetrica.enableActivityAutoTracking(this.application)
+        YandexMetrica.enableActivityAutoTracking(this.application)
         setContentView(R.layout.activity_splash)
+        // NAVIGATION
+        // TODO: move this to another activity or it will cause failure on launch
+
         sharedPreferences = getSharedPreferences(SP_KEY_ACCOUNT, Context.MODE_PRIVATE)
 
-        startMainActivity()
-    }
 
+
+
+
+        startMainActivity() //TODO: to be edited later
+
+    }
 
     private fun startMainActivity() {
 
